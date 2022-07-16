@@ -10,6 +10,8 @@ class Link(models.Model):
         get_user_model(), on_delete=models.CASCADE, related_name="links"
     )
     body = models.TextField()
+    objects = models.Manager()
+    public = ActiveLinkManager()
 
     created_date = models.DateTimeField(auto_now_add=True)
     publish = models.DateTimeField(default=timezone.now)

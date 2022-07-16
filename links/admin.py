@@ -1,6 +1,7 @@
 from django.contrib import admin
-from links.models import Link
 from django.contrib.auth.models import Group
+from links.models import Link
+
 
 admin.site.register(Link)
 
